@@ -1,0 +1,13 @@
+- Chạy jenkins bằng docker
+Docker run -d - -name jenkins -p 8080:8080 -p 50000:50000 -v /Users/tuna/desktop/jenkins:/var/jenkins_home jenkins/jenkins:lts
+- Cài đặt ngrok
+yum install -y wget unzip
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+unzip ngrok-stable-linux-amd64.zip
+- Cài docker bằng scrip:
+curl https://releases.rancher.com/install-docker/20.10.sh | sh
+- Cài tool trên agent từ jenkins controller (lưu ý cần cài thư viện custom tool trên jenkin controller)
+VD: DOCKER_COMPOSE = tool name: ‘docker-compose’ ,type: ‘com.cloudbees.jenkins.plugins.customtools.CustomTool’
+- Quản lý user: cài plugin LBAC
+-Parameter: cho phép truyền các tham số người dùng vào thời điểm bắt đầu chạy pipeline
+-Enviroment: các tham số sử dụng khi chạy pipeline (?)
