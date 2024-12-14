@@ -13,3 +13,68 @@ Hi, I'm Mona. You might recognize me as GitHub's mascot.
 |     1| JavaScript|
 |     2| Python    |
 |     3| SQL       |
+
+## Collapse
+<details>
+<summary>My top languages</summary>
+
+| Rank | Languages |
+|-----:|-----------|
+|     1| JavaScript|
+|     2| Python    |
+|     3| SQL       |
+
+</details>
+
+
+---
+> If we pull together and commit ourselves, then we can push through anything.
+
+— Mona the Octocat
+
+
+## About me
+
+<!-- TO DO: add more details about me later -->
+
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
+
+1. List item one.
++
+List item one continued with a second paragraph followed by an
+Indented block.
++
+.................
+$ ls *.sh
+$ mv *.sh ~/tmp
+.................
++
+List item continued with a third paragraph.
+
+2. List item two continued with an open block.
++
+--
+This paragraph is part of the preceding list item.
+
+a. This list is nested and does not require explicit item
+continuation.
++
+This paragraph is part of the preceding list item.
+
+b. List item b.
+
+This paragraph belongs to item two of the outer list.
+--
