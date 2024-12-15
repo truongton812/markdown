@@ -1,6 +1,6 @@
 
----
-**Sample 1**
+
+##### **Sample 1**
 ```
 #!/usr/bin/env groovy
 pipeline {
@@ -67,8 +67,8 @@ def test() {
 }
 ```
 
----
-**Sample 2**
+
+##### **Sample 2**
 ```
 #!/usr/bin/env groovy
 pipeline {
@@ -178,5 +178,50 @@ def test() {
 def getTagVersion(){
     def tagImage = params.ENV == ''  ? "${env.GIT_COMMIT}" : sh(returnStdout:  true, script: "git tag --contains").trim()
     return tagImage
+}
+```
+
+
+##### **Code to get hash commit**
+```
+pipeline {
+    agent any
+    stages {
+        stage("Get hash") {
+            steps {
+                dir("/var/jenkins_home/workspace/My first pipeline/aws-tinhocthatladongian-webserver") {
+                    script {
+                        CURRENT_HASH = sh(script: 'git rev-parse HEAD', returnStdout: true).trim()
+                    }
+                    echo "${CURRENT_HASH}"
+                }
+            }
+        }
+    }
+}
+```
+##### **Other way (define in function)**
+```
+pipeline {
+    agent any
+    stages {
+        stage("Get hash") {
+            steps {
+                dir("/var/jenkins_home/workspace/My first pipeline/aws-tinhocthatladongian-webserver") {
+                    script{
+                        def CURRENT_HASH = getHash()
+                    }
+                    echo "${CURRENT_HASH}"
+                }
+            }
+        }
+    }
+}
+
+def getHash(){
+    script{
+        CURRENT_HASH = sh(script:'git rev-parse HEAD', returnStdout: true)
+    }
+    return CURRENT_HASH
 }
 ```
