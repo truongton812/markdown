@@ -4,6 +4,8 @@
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
 </picture>
 
+Insert photo
+![alt text](http://picsum.photos/200/200)
 ## About me
 
 Hi, I'm Mona. You might recognize me as GitHub's mascot.
@@ -14,6 +16,12 @@ Hi, I'm Mona. You might recognize me as GitHub's mascot.
 |     2| Python    |
 |     3| SQL       |
 
+| Rank | Languages | Random |
+| --- | --- | --- |
+| 1 | Java | abc |
+| 2 | Python | abc |
+
+> To create table only need three dashes
 ## Collapse
 <details>
 <summary>My top languages</summary>
@@ -28,7 +36,8 @@ Hi, I'm Mona. You might recognize me as GitHub's mascot.
 
 
 ---
-> If we pull together and commit ourselves, then we can push through anything.
+
+> Blockquote text paragraph
 
 — Mona the Octocat
 
@@ -51,30 +60,33 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
-
-1. List item one.
-+
-List item one continued with a second paragraph followed by an
-Indented block.
-+
-.................
-$ ls *.sh
-$ mv *.sh ~/tmp
-.................
-+
-List item continued with a third paragraph.
-
-2. List item two continued with an open block.
-+
 --
-This paragraph is part of the preceding list item.
 
-a. This list is nested and does not require explicit item
-continuation.
-+
-This paragraph is part of the preceding list item.
 
-b. List item b.
+# heading 1
+## heading 2
+### heading 3
+#### heading 4
+##### heading 5
+###### heading 6
 
-This paragraph belongs to item two of the outer list.
---
+- first item
+- second item
+  - indent
+     1. inner
+        
+[Put link here](https://google.com)
+
+Bold something `hello`
+
+A block of code
+```bash
+echo 'hello world'
+```
+```javascript
+let num = Math.random();
+```
+How to bold a character **Bold** and italic *Italic* and delete ~~delete~~
+
+Long dash
+---
